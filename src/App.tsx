@@ -1,21 +1,21 @@
-import React from "react";
-import { BrowserRouter, Route, Routes as Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Route, Routes as Switch } from 'react-router-dom';
 
-import { Box, CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 
-import HomePage from "#/pages/Home";
-import NotFoundPage from "#/pages/NotFound";
-import Theme from "#/Theme";
+import HomePage from '#/pages/Home';
+import NotFoundPage from '#/pages/NotFound';
+import Theme from '#/Theme';
 
 const PAGES = {
-  HOME: () => "/",
-  NOT_FOUND: () => "*",
+  HOME: () => '/',
+  NOT_FOUND: () => '*',
 };
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={Theme}>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <BrowserRouter>
           <Switch>

@@ -22,7 +22,8 @@
   "scripts": {
     "dev": "vite --port=3000",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clear": "rm -rf dist node_modules yarn.lock && yarn install"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
