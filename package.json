@@ -1,9 +1,9 @@
 {
-  "name": "tea-web",
+  "name": "tea",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "Tea Web",
+  "description": "Teia do Tea",
   "author": "analuciabolico",
   "license": "MIT",
   "keywords": [
@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bolicos/tea-web.git"
+    "url": "git+https://github.com/bolicos/tea.git"
   },
   "bugs": {
-    "url": "https://github.com/bolicos/tea-web/issues"
+    "url": "https://github.com/bolicos/tea/issues"
   },
   "scripts": {
     "dev": "vite --port=3000",
