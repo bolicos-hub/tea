@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { Container } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
+import { PAGES } from '../App';
 
 const Home: React.FC = () => {
   const [isLoading] = useState(false);
+  const navigate = useNavigate();
 
+  const helmet = 'Teia do TEA';
   const title = 'TEIA DO TEA';
   const subtitle = 'Site e app feito por autistas para autistas - mapeamento de sintomas (não é um diagnóstico)';
   const description = 'NOME';
@@ -19,27 +24,46 @@ const Home: React.FC = () => {
     <>...Carregando</>
   ) : (
     <>
-      <Container>
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
-        <br />
-        <br />
-        <div>
-          <h2>{description}</h2>
-          <p>{funcionatilies}</p>
-          <br />
-          <button>{wordButton}</button>
-          <br />
-          <button>{introButton}</button>
-          <br />
-          <button>{futureButton}</button>
-          <br />
+      <Helmet>
+        <title>{helmet}</title>
+      </Helmet>
 
-          <br />
-          <p>{lastUpdates}</p>
-          <br />
-          <p>{goals}</p>
-        </div>
+      <Container>
+        <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
+          <Typography variant="h1" gutterBottom>
+            {title}
+          </Typography>
+
+          <Typography variant="h3" gutterBottom>
+            {subtitle}
+          </Typography>
+        </Stack>
+
+        <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
+          <Typography variant="h4" gutterBottom>
+            {description}
+          </Typography>
+
+          <Typography variant="h4" gutterBottom>
+            {funcionatilies}
+          </Typography>
+        </Stack>
+
+        <Stack mb={5} direction="column" alignItems="center" justifyContent="space-between">
+          <Button onClick={() => navigate(PAGES.WEB)}>{wordButton}</Button>
+          <Button onClick={() => navigate(PAGES.INTRODUCTION)}>{introButton}</Button>
+          <Button onClick={() => navigate(PAGES.NEXT_STEPS)}>{futureButton}</Button>
+        </Stack>
+
+        <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
+          <Typography variant="h4" gutterBottom>
+            {lastUpdates}
+          </Typography>
+
+          <Typography variant="h4" gutterBottom>
+            {goals}
+          </Typography>
+        </Stack>
       </Container>
     </>
   );
