@@ -1,67 +1,64 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import { Button, Container, Stack, Typography } from '@mui/material';
-import { Helmet } from 'react-helmet-async';
-import { PAGES } from '../App';
+
+import ChangeLanguage from '#/components/ChangeLanguage';
+import { PAGES } from '#/pages/App';
 
 const Home: React.FC = () => {
   const [isLoading] = useState(false);
   const navigate = useNavigate();
-
-  const helmet = 'Teia do TEA';
-  const title = 'TEIA DO TEA';
-  const subtitle = 'Site e app feito por autistas para autistas - mapeamento de sintomas (não é um diagnóstico)';
-  const description = 'NOME';
-  const funcionatilies = 'Descrição das funcionalidades';
-  const wordButton = 'TEIA';
-  const introButton = 'INTRODUÇÃO';
-  const futureButton = 'Fiz a minha teia e agora?';
-  const lastUpdates = 'Ultimas atualizações:';
-  const goals = 'Ferramenta criada por pessoas autistas para pessoas autistas.';
+  const { t } = useTranslation('home');
 
   return isLoading ? (
     <>...Carregando</>
   ) : (
     <>
       <Helmet>
-        <title>{helmet}</title>
+        <title>{t('helmet')}</title>
       </Helmet>
 
       <Container>
         <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
+          <ChangeLanguage />
+        </Stack>
+
+        <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h1" gutterBottom>
-            {title}
+            {t('title')}
           </Typography>
 
           <Typography variant="h3" gutterBottom>
-            {subtitle}
+            {t('subtitle')}
           </Typography>
         </Stack>
 
         <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            {description}
+            {t('description')}
           </Typography>
 
           <Typography variant="h4" gutterBottom>
-            {funcionatilies}
+            {t('funcionatilies')}
           </Typography>
         </Stack>
 
         <Stack mb={5} direction="column" alignItems="center" justifyContent="space-between">
-          <Button onClick={() => navigate(PAGES.WEB)}>{wordButton}</Button>
-          <Button onClick={() => navigate(PAGES.INTRODUCTION)}>{introButton}</Button>
-          <Button onClick={() => navigate(PAGES.NEXT_STEPS)}>{futureButton}</Button>
+          <Button onClick={() => navigate(PAGES.WEB)}>{t('buttons.web')}</Button>
+          <Button onClick={() => navigate(PAGES.INTRODUCTION)}>{t('buttons.introduction')}</Button>
+          <Button onClick={() => navigate(PAGES.NEXT_STEPS)}>{t('buttons.next-steps')}</Button>
         </Stack>
 
         <Stack direction="column" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            {lastUpdates}
+            {t('last-updates')}
           </Typography>
 
           <Typography variant="h4" gutterBottom>
-            {goals}
+            {t('goals')}
           </Typography>
         </Stack>
       </Container>

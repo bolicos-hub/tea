@@ -1,0 +1,14 @@
+{
+    "helmet": "Home Page | TEA web",
+    "title": "TEA web",
+    "subtitle": "Website and app made by autistic people for autistic people - symptom mapping (not a diagnosis)",
+    "description": "Description",
+    "funcionatilies": "Functionalities description",
+    "buttons": {
+        "web": "WEB",
+        "introduction": "INTRODUCTION",
+        "next-steps": "I made my web and now?"
+    },
+    "last-updates": "Last updates:",
+    "goals": "Tool created by autistic people for autistic people."
+}

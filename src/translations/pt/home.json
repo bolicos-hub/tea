@@ -1,0 +1,14 @@
+{
+    "helmet": "Página Inicial | Teia do TEA",
+    "title": "Teia do TEA",
+    "subtitle": "Site e app feito por autistas para autistas - mapeamento de sintomas (não é um diagnóstico)",
+    "description": "Descrição",
+    "funcionatilies": "Descrição das funcionalidades",
+    "buttons": {
+        "web": "TEIA",
+        "introduction": "INTRODUÇÃO",
+        "next-steps": "Fiz a minha teia e agora?"
+    },
+    "last-updates": "Ultimas atualizações:",
+    "goals": "Ferramenta criada por pessoas autistas para pessoas autistas."
+}
