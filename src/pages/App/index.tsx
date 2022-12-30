@@ -15,9 +15,11 @@ import { I18nextProvider } from 'react-i18next';
 // English
 import common_en from '#/translations/en/common.json';
 import home_en from '#/translations/en/home.json';
+import introduction_en from '#/translations/en/introduction.json';
 // Portuguese
 import common_pt from '#/translations/pt/common.json';
 import home_pt from '#/translations/pt/home.json';
+import introduction_pt from '#/translations/pt/introduction.json';
 // ---------------------------------------------------
 
 export const PAGES = {
@@ -36,10 +38,12 @@ const App: React.FC = () => {
       en: {
         common: common_en,
         home: home_en,
+        introduction: introduction_en,
       },
       pt: {
         common: common_pt,
         home: home_pt,
+        introduction: introduction_pt,
       },
     },
   });

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,6 @@ import { ButtonParameters, StackParameters, TypographyParameters } from '#/model
 import { PAGES } from '#/pages/App';
 
 const Home: React.FC = () => {
-  const [isLoading] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation('home');
 
@@ -42,9 +41,7 @@ const Home: React.FC = () => {
     mx: { xs: 2, sm: 9, md: 12, lg: 15, xl: 19 },
   } as StackParameters;
 
-  return isLoading ? (
-    <>...Carregando</>
-  ) : (
+  return (
     <>
       <Helmet>
         <title>{t('helmet')}</title>
