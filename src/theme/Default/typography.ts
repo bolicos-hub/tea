@@ -34,10 +34,11 @@ export function responsiveFontSizes({ sm, md, lg }: Size) {
 // ----------------------------------------------------------------------
 
 const FONT_PRIMARY = 'Public Sans, sans-serif'; // Google Font
-// const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
+const FONT_SECONDARY = "'Ubuntu', sans-serif"; // Google Font
+const FONT_TERCIARY = "'Roboto Mono', monospace"; // Google Font
 
 const typography: TypographyOptions | ((palette: Palette) => TypographyOptions) = {
-  fontFamily: FONT_PRIMARY,
+  fontFamily: FONT_TERCIARY,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
   fontWeightBold: 700,

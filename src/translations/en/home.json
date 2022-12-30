@@ -5,8 +5,8 @@
     "description": "Description",
     "funcionatilies": "Functionalities description",
     "buttons": {
-        "web": "WEB",
-        "introduction": "INTRODUCTION",
+        "web": "Your WEB",
+        "introduction": "Introduction",
         "next-steps": "I made my web and now?"
     },
     "last-updates": "Last updates:",
