@@ -16,11 +16,13 @@ import { I18nextProvider } from 'react-i18next';
 import common_en from '#/translations/en/common.json';
 import home_en from '#/translations/en/home.json';
 import introduction_en from '#/translations/en/introduction.json';
+import next_steps_en from '#/translations/en/next_steps.json';
 import web_en from '#/translations/en/web.json';
 // Portuguese
 import common_pt from '#/translations/pt/common.json';
 import home_pt from '#/translations/pt/home.json';
 import introduction_pt from '#/translations/pt/introduction.json';
+import next_steps_pt from '#/translations/pt/next_steps.json';
 import web_pt from '#/translations/pt/web.json';
 // ---------------------------------------------------
 
@@ -42,12 +44,14 @@ const App: React.FC = () => {
         home: home_en,
         introduction: introduction_en,
         web: web_en,
+        next_steps: next_steps_en,
       },
       pt: {
         common: common_pt,
         home: home_pt,
         introduction: introduction_pt,
         web: web_pt,
+        next_steps: next_steps_pt,
       },
     },
   });
