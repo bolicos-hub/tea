@@ -1,12 +1,10 @@
 import React, { useMemo } from 'react';
 
-// @mui
 import { CssBaseline, Theme, ThemeOptions } from '@mui/material';
 import { createTheme, StyledEngineProvider, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 
-//
 import GlobalStyles from './globalStyles';
-import componentsOverride from './overrides';
+import ComponentsOverrides from './overrides';
 import palette from './palette';
 import shadows from './shadows';
 import typography from './typography';
@@ -22,12 +20,26 @@ export default function ThemeProvider({ children }: Props) {
       shape: { borderRadius: 6 },
       typography,
       shadows: shadows(),
+
+      breakpoints: {
+        values: {
+          xs: 0,
+          sm: 600,
+          md: 900,
+          lg: 1200,
+          xl: 1536,
+          mobile: 0,
+          tablet: 640,
+          laptop: 1024,
+          desktop: 1200,
+        },
+      },
     }),
     []
   );
 
   const theme: Theme = createTheme(themeOptions);
-  theme.components = componentsOverride(theme);
+  theme.components = ComponentsOverrides(theme);
 
   return (
     <StyledEngineProvider injectFirst>

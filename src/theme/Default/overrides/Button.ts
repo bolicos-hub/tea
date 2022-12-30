@@ -1,8 +1,6 @@
 import { alpha, Theme } from '@mui/material/styles';
 import customShadows from '../customShadows';
 
-// ----------------------------------------------------------------------
-
 export default function Button(theme: Theme) {
   const custom = customShadows();
 

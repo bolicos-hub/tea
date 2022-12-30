@@ -1,4 +1,3 @@
-//
 import { Theme } from '@mui/material';
 import Autocomplete from './Autocomplete';
 import Backdrop from './Backdrop';
@@ -9,8 +8,6 @@ import Paper from './Paper';
 import Table from './Table';
 import Tooltip from './Tooltip';
 import Typography from './Typography';
-
-// ----------------------------------------------------------------------
 
 export default function ComponentsOverrides(theme: Theme) {
   return Object.assign(
