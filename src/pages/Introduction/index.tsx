@@ -9,7 +9,7 @@ import ChangeLanguage from '#/components/ChangeLanguage';
 import { ButtonParameters, StackParameters, TypographyParameters } from '#/models';
 import { PAGES } from '../App';
 
-const Home: React.FC = () => {
+const Introduction: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation('introduction');
 
@@ -63,4 +63,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Introduction;
